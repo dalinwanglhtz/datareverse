@@ -9,9 +9,6 @@ import java.util.List;
 public class Kata {
 
 	public static int[] DataReverse(int[] data) {
-		
-		printData(data);
-		
 		int[][] newData = new int[data.length/8][8];
 		for(int i=0; i<newData.length; i++) {
 			newData[i] = Arrays.copyOfRange(data, i*8, i*8+8);
@@ -26,17 +23,7 @@ public class Kata {
 			}
 		}
 		
-		printData(result);
-		
 		return result;
-	}
-
-	private static void printData(int[] data) {
-		System.out.println("This test: ");
-		for(int i=0; i<data.length; i++) {
-			System.out.print(data[i]+" ");
-		}
-		System.out.println();
 	}
 
 }
