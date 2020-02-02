@@ -15,12 +15,10 @@ public class Kata {
 		}
 		List<int[]> list = Arrays.asList(newData);
 		Collections.reverse(list);
-		int count=0;
 		int[] result = new int[data.length];
-		for(int i=0; i<newData.length; i++) {
-			for(int j=0; j<newData[i].length; j++) {
-				result[count++] = list.get(i)[j];
-			}
+		
+		for(int i=0; i<list.size(); i++) {
+			System.arraycopy(list.get(i), 0, result, i*8, 8);
 		}
 		
 		return result;
